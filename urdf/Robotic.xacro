@@ -1,0 +1,198 @@
+<?xml version="1.0" ?>
+<robot name="Robotic" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find Robotic_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find Robotic_description)/urdf/Robotic.trans" />
+<xacro:include filename="$(find Robotic_description)/urdf/Robotic.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="1.6640170895190729e-16 3.025485617307405e-17 0.057904964075767486" rpy="0 0 0"/>
+    <mass value="0.6613445234888192"/>
+    <inertia ixx="0.00433" iyy="0.00433" izz="0.005511" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Robotic_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Robotic_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ARM3_2">
+  <inertial>
+    <origin xyz="-0.025000000000000105 0.12254927997133135 0.004516375891340463" rpy="0 0 0"/>
+    <mass value="9.751530853135536"/>
+    <inertia ixx="0.119185" iyy="0.006843" izz="0.116405" ixy="-0.0" iyz="-0.002327" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.025 0.009385 -0.558655" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Robotic_description/meshes/ARM3_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.025 0.009385 -0.558655" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Robotic_description/meshes/ARM3_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component8_2">
+  <inertial>
+    <origin xyz="-0.014167680831496617 -0.16085330338194437 -0.2517490300577758" rpy="0 0 0"/>
+    <mass value="0.10872533068955877"/>
+    <inertia ixx="3e-05" iyy="2.9e-05" izz="6e-06" ixy="-0.0" iyz="2e-06" ixz="5e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.00274 -0.480294 -0.508628" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Robotic_description/meshes/Component8_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.00274 -0.480294 -0.508628" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Robotic_description/meshes/Component8_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component8_1">
+  <inertial>
+    <origin xyz="0.01964768083149642 -0.16089243613980747 -0.25175176136831007" rpy="0 0 0"/>
+    <mass value="0.10872533068955877"/>
+    <inertia ixx="3e-05" iyy="2.9e-05" izz="6e-06" ixy="0.0" iyz="2e-06" ixz="-5e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.00274 -0.480294 -0.508628" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Robotic_description/meshes/Component8_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.00274 -0.480294 -0.508628" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Robotic_description/meshes/Component8_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component7_1">
+  <inertial>
+    <origin xyz="0.024999999999999876 -0.00021947749322320798 -0.1087515414193721" rpy="0 0 0"/>
+    <mass value="9.054825196129269"/>
+    <inertia ixx="0.089485" iyy="0.087308" izz="0.005949" ixy="0.0" iyz="-0.001558" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.025 -0.323161 -0.568469" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Robotic_description/meshes/Component7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.025 -0.323161 -0.568469" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Robotic_description/meshes/Component7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ARM3_1">
+  <inertial>
+    <origin xyz="1.0658141036401502e-16 -0.004599414182134712 0.12254624835995875" rpy="0 0 0"/>
+    <mass value="9.751530853135536"/>
+    <inertia ixx="0.119185" iyy="0.116402" izz="0.006846" ixy="-0.0" iyz="0.002401" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.000654 -0.226115" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Robotic_description/meshes/ARM3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.000654 -0.226115" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Robotic_description/meshes/ARM3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component9_1">
+  <inertial>
+    <origin xyz="0.010168251277906446 -0.0006225548633208727 0.018923349280593527" rpy="0 0 0"/>
+    <mass value="4.156877046794862"/>
+    <inertia ixx="0.011162" iyy="0.00995" izz="0.015501" ixy="3.8e-05" iyz="8.9e-05" ixz="-0.000858"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.15" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Robotic_description/meshes/Component9_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.15" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Robotic_description/meshes/Component9_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Revolute 12" type="continuous">
+  <origin xyz="-0.025 -0.010039 0.33254" rpy="0 0 0"/>
+  <parent link="ARM3_1"/>
+  <child link="ARM3_2"/>
+  <axis xyz="-1.0 -0.0 0.0"/>
+</joint>
+
+<joint name="Slider 14" type="prismatic">
+  <origin xyz="0.02226 0.157133 -0.059841" rpy="0 0 0"/>
+  <parent link="Component7_1"/>
+  <child link="Component8_2"/>
+  <axis xyz="1.0 0.0 -0.0"/>
+  <limit upper="0.0" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Slider 15" type="prismatic">
+  <origin xyz="0.02226 0.157133 -0.059841" rpy="0 0 0"/>
+  <parent link="Component7_1"/>
+  <child link="Component8_1"/>
+  <axis xyz="1.0 0.0 -0.0"/>
+  <limit upper="0.0" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Revolute 16" type="continuous">
+  <origin xyz="0.0 0.332546 0.009814" rpy="0 0 0"/>
+  <parent link="ARM3_2"/>
+  <child link="Component7_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Revolute 17" type="continuous">
+  <origin xyz="0.0 0.000654 0.076115" rpy="0 0 0"/>
+  <parent link="Component9_1"/>
+  <child link="ARM3_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Revolute 18" type="continuous">
+  <origin xyz="0.0 0.0 0.15" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Component9_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+</joint>
+
+</robot>
